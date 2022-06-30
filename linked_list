@@ -1,0 +1,17 @@
+"""
+Implementation of singly linked list
+
+Node: -> Data and The reference
+Head -> None
+Tail -> None
+
+Operations:
+
+1. Add a node to the list
+2. Remove a node from the list
+3. Add at the beginning or at the end of the list
+4. Add a node before or after a node with a specific key
+
+"""
+
+
