@@ -1,17 +1,64 @@
 """
-Implementation of singly linked list
+Linked list implementation
 
-Node: -> Data and The reference
-Head -> None
-Tail -> None
+Node (Data) (Has Next)
 
 Operations:
 
-1. Add a node to the list
-2. Remove a node from the list
-3. Add at the beginning or at the end of the list
-4. Add a node before or after a node with a specific key
+Get data
+Set data
+
+Get next
+Set Next
 
 """
+
+
+class SinglyLinkedList:
+	"""Node implementation of the linked list"""
+	def __init__(self, data):
+		self.data = data
+		self.next = None
+
+	def get_data(self):
+		"""Returns the data in the node"""
+		return self.data
+
+
+	def set_data(self, new_data):
+		"""Sets the new data of the node"""
+		self.data = new_data
+
+
+	def get_next(self):
+		"""Returns the new next value of the node"""
+		return self.next
+
+	def set_next(self, new_next):
+		"""Sets the next value"""
+		self.next = new_next
+
+	def __repr__(self):
+		return "ssl_node data {}, next value {}".format(self.data, self.next)
+		
+# The first node:
+node_one = SinglyLinkedList("apple")
+print("First Node data",node_one.get_data())
+print("Next value on first node",node_one.get_next())
+
+node_two = SinglyLinkedList("orange")
+
+print("Data on node two",node_two.get_data())
+print("next value on node two",node_two.get_next())
+
+node_one.set_next(node_two)
+print("Next value on first node",node_one.get_next())
+
+
+#print("New next value added on node two",node_one.get_next())
+
+
+
+
 
 
